@@ -1,0 +1,85 @@
+<div class="dialog">
+  <h2 mat-dialog-title>Edit Candidate</h2>
+
+  <div mat-dialog-content>
+    <form fxLayout="column" #form="ngForm">
+      <mat-form-field>
+        <input
+          matInput
+          [(ngModel)]="data.name"
+          placeholder="Name"
+          name="name"
+          required
+        />
+        <mat-error align="end">This field is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          [(ngModel)]="data.surname"
+          placeholder="Surname"
+          name="surname"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          [(ngModel)]="data.birthday"
+          name="birthday"
+          [matDatepicker]="picker"
+          placeholder="Birthday"
+          [max]="maxDate"
+          [min]="minDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          [(ngModel)]="data.salaryInDollars"
+          placeholder="Salary"
+          name="salaryInDollars"
+          type="number"
+          [min]="0"
+          #salary="ngModel"
+        />
+        <mat-error align="end"
+          >Must be more than {{ salary?.errors?.requiredValue }}.</mat-error
+        >
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div
+    mat-dialog-actions
+    fxLayout="row nowrap"
+    fxLayoutGap="10px"
+    class="actions"
+  >
+    <button
+      mat-raised-button
+      color="warn"
+      [mat-dialog-close]="false"
+      fxFlex="50"
+    >
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]="data"
+      cdkFocusInitial
+      fxFlex="50"
+      [disabled]="form.invalid"
+    >
+      Save
+    </button>
+  </div>
+</div>

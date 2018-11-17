@@ -1,0 +1,54 @@
+  <h1>Candidate</h1>
+
+  <app-short-info></app-short-info>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="isAllPanelsOpened ? closeAll() : openAll()"
+    style="margin: 30px 0"
+  >
+    {{ isAllPanelsOpened ? 'Collapse' : 'Expand' }} All
+  </button>
+
+  <mat-accordion #myaccordion="matAccordion" multi="true" hideToggle>
+    <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Contacts </mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        Some deferred content
+      </ng-template>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+      <mat-expansion-panel-header>
+        <mat-panel-title> CVS </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        Some deferred content
+      </ng-template>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Experience </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        Some deferred content
+      </ng-template>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Notes </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        Some deferred content
+      </ng-template>
+    </mat-expansion-panel>
+  </mat-accordion>
+

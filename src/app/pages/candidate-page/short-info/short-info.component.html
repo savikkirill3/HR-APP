@@ -1,0 +1,26 @@
+<mat-card class="candidate-info" fxLayout>
+  <figure class="candidate-info-figure" fxLayout fxLayoutAlign="center center">
+    <img
+      class="candidate-info-img"
+      src="https://i.pinimg.com/originals/79/13/fb/7913fb976c0023a7d5af13ab34085106.jpg"
+    />
+  </figure>
+
+  <mat-list class="candidate-info-list" fxFlex="1 1 auto">
+    <mat-list-item>
+      Name: <span class="candidate-info-data">{{ name }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+      Surname:
+      <span class="candidate-info-data">{{ surname || '&mdash;' }}</span>
+    </mat-list-item>
+  </mat-list>
+
+  <button mat-icon-button  [matMenuTriggerFor]="menu">
+      <mat-icon >more_vert</mat-icon>
+    </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item><span>Edit</span></button>
+  </mat-menu>
+</mat-card>

@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { CandidatePageComponent } from './pages/candidate-page/candidate-page.component';
 import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info.component';
 import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
+import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CandidatePageComponent,
     ShortInfoComponent,
-    EditCandidateDialogComponent
+    EditCandidateDialogComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

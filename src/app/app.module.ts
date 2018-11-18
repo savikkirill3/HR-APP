@@ -13,13 +13,18 @@ import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info
 import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
 
+import { CvsComponent } from './pages/candidate-page/cvs/cvs.component';
+import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CandidatePageComponent,
     ShortInfoComponent,
     EditCandidateDialogComponent,
-    SkillsComponent
+    SkillsComponent,
+    CvsComponent,
+    CvsAddComponent
   ],
   imports: [
     BrowserModule,

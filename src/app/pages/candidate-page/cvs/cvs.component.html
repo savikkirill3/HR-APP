@@ -1,0 +1,15 @@
+<mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let cv of cvList">
+        <mat-icon mat-list-icon>note</mat-icon>
+        <h4 mat-line>{{cv.name}}</h4>
+        <button mat-raised-button ><a href="{{cv.name}}" download>Download</a></button>
+        <label class="delete" (click)="delete(cv)"><mat-icon mat-list-icon>delete</mat-icon></label>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="isShowAddCvs = true" mat-raised-button >Add CV</button>
+
+    <cvs-add *ngIf="isShowAddCvs" (CVFileEmitter)="addCvFile($event)"></cvs-add>
+  </mat-card-actions>

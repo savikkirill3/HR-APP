@@ -1,7 +1,6 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {Component} from '@angular/core';
 import {MatChipInputEvent} from '@angular/material';
-import {EditCandidateDialogComponent} from '../short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 
 export interface Skill {
   name: string;
@@ -14,7 +13,6 @@ export interface Skill {
 })
 export class SkillsComponent {
 
-  isAllPanelsOpened = false;
   selectable = true;
   removable = true;
   addOnBlur = true;
@@ -47,14 +45,6 @@ export class SkillsComponent {
     if (index >= 0) {
       this.skills.splice(index, 1);
     }
-  }
-
-  onPanelOpened() {
-    this.isAllPanelsOpened = true;
-  }
-
-  onPanelClosed() {
-    this.isAllPanelsOpened = false;
   }
 
 }

@@ -6,21 +6,29 @@
     />
   </figure>
 
-  <mat-list class="candidate-info-list" fxFlex="1 1 auto">
-    <mat-list-item>
-      Name: <span class="candidate-info-data">{{ name }}</span>
-    </mat-list-item>
-
-    <mat-list-item>
-      Surname:
-      <span class="candidate-info-data">{{ surname || '&mdash;' }}</span>
-    </mat-list-item>
-  </mat-list>
+  <table fxFlex="1 1 auto" class="candidate-info-table">
+    <tr>
+      <td>Name:</td>
+      <td>{{ candidate.name }}</td>
+    </tr>
+    <tr>
+      <td>Surname:</td>
+      <td>{{ candidate.surname || '&mdash;' }}</td>
+    </tr>
+    <tr>
+      <td>Birthday:</td>
+      <td>{{ (candidate.birthday | date) || '&mdash;' }}</td>
+    </tr>
+    <tr>
+      <td>Salary:</td>
+      <td>{{ (candidate.salaryInDollars | currency) || '&mdash;' }}</td>
+    </tr>
+  </table>
 
   <button mat-icon-button  [matMenuTriggerFor]="menu">
       <mat-icon >more_vert</mat-icon>
     </button>
   <mat-menu #menu="matMenu" xPosition="before">
-    <button mat-menu-item><span>Edit</span></button>
+    <button mat-menu-item (click)="onOpenEditDialog()"><span>Edit</span></button>
   </mat-menu>
 </mat-card>

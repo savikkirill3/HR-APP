@@ -1,0 +1,26 @@
+<mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+  <mat-expansion-panel-header>
+    <mat-panel-title> Skill</mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let skill of skills" [selectable]="selectable"
+                  [removable]="removable" (removed)="remove(skill)">
+          {{skill.name}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="New skill..."
+               [matChipInputFor]="chipList"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               [matChipInputAddOnBlur]="addOnBlur"
+               (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+
+  </ng-template>
+
+</mat-expansion-panel>
+
+

@@ -17,7 +17,7 @@
       <mat-panel-title> Contacts</mat-panel-title>
     </mat-expansion-panel-header>
     <ng-template matExpansionPanelContent>
-      Some deferred content
+      <app-contacts></app-contacts>
     </ng-template>
   </mat-expansion-panel>
 
@@ -26,9 +26,7 @@
       <mat-panel-title> CVS</mat-panel-title>
     </mat-expansion-panel-header>
 
-    <ng-template matExpansionPanelContent>
-      Some deferred content
-    </ng-template>
+    <ng-template matExpansionPanelContent> Some deferred content </ng-template>
   </mat-expansion-panel>
 
   <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
@@ -39,18 +37,13 @@
     <ng-template matExpansionPanelContent>
       <app-skills></app-skills>
     </ng-template>
-
   </mat-expansion-panel>
-
 
   <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
     <mat-expansion-panel-header>
       <mat-panel-title> Notes</mat-panel-title>
     </mat-expansion-panel-header>
 
-    <ng-template matExpansionPanelContent>
-      Some deferred content
-    </ng-template>
+    <ng-template matExpansionPanelContent> Some deferred content </ng-template>
   </mat-expansion-panel>
 </mat-accordion>
-

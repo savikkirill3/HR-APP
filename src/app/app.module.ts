@@ -12,6 +12,8 @@ import { CandidatePageComponent } from './pages/candidate-page/candidate-page.co
 import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info.component';
 import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
+import { ContactsComponent } from './pages/candidate-page/contacts/contacts.component';
+import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SkillsComponent } from './pages/candidate-page/skills/skills.component'
     CandidatePageComponent,
     ShortInfoComponent,
     EditCandidateDialogComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactsComponent,
+    EditContactsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,6 @@ import { SkillsComponent } from './pages/candidate-page/skills/skills.component'
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent]
 })
 export class AppModule {}

@@ -2,19 +2,6 @@
   position: relative;
 }
 
-.candidate-info-figure {
-  border-radius: 4px;
-  box-shadow: 0 4px 3px -1px rgba(0,0,0,.25), 0 3px 3px 0 rgba(0,0,0,.24), 0 3px 6px 0 rgba(0,0,0,.22);
-  margin: 0;
-  max-width: 300px;
-  overflow: hidden;
-}
-
-.candidate-info-img {
-  display: block;
-  max-height: 30vh;
-}
-
 .editingInput {
   top: 3px;
   width: 50%;

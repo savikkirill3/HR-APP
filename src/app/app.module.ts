@@ -12,6 +12,7 @@ import { CandidatePageComponent } from './pages/candidate-page/candidate-page.co
 import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info.component';
 import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
+import { ExperiencesComponent } from './pages/candidate-page/experiences/experiences.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SkillsComponent } from './pages/candidate-page/skills/skills.component'
     CandidatePageComponent,
     ShortInfoComponent,
     EditCandidateDialogComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperiencesComponent
   ],
   imports: [
     BrowserModule,

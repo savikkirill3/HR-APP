@@ -14,6 +14,8 @@ import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
 import { ContactsComponent } from './pages/candidate-page/contacts/contacts.component';
 import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
+import { CvsComponent } from './pages/candidate-page/cvs/cvs.component';
+import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edi
     EditCandidateDialogComponent,
     SkillsComponent,
     ContactsComponent,
-    EditContactsDialogComponent
+    EditContactsDialogComponent,
+    CvsComponent, 
+    CvsAddComponent
   ],
   imports: [
     BrowserModule,

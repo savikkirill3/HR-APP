@@ -1,11 +1,9 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component} from '@angular/core';
-import {MatChipInputEvent} from '@angular/material';
-import {EditCandidateDialogComponent} from '../short-info/edit-candidate-dialog/edit-candidate-dialog.component';
-
-export interface Skill {
-  name: string;
-}
+import {Component, ElementRef, ViewChild} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocomplete} from '@angular/material';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-skills',
@@ -14,34 +12,43 @@ export interface Skill {
 })
 export class SkillsComponent {
 
-  isAllPanelsOpened = false;
   selectable = true;
   removable = true;
   addOnBlur = true;
-  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
-  skills: Skill[] = [
-    {name: 'Java'},
-    {name: 'JS'},
-    {name: 'PHP'},
-  ];
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  skillCtrl = new FormControl();
+  filteredSkills: Observable<string[]>;
+  skills: string[] = ['Java', 'JS'];
+  allSkills: string[] = ['Java', 'JS', 'PHP', 'C#', 'Python'];
 
-  constructor() { }
+  @ViewChild('skillInput') skillInput: ElementRef<HTMLInputElement>;
+  @ViewChild('auto') matAutocomplete: MatAutocomplete;
+
+  constructor() {
+    this.filteredSkills = this.skillCtrl.valueChanges.pipe(
+      startWith(null),
+      map((skill: string | null) => skill ? this._filter(skill) : this.allSkills.slice()));
+  }
 
   add(event: MatChipInputEvent): void {
-    const input = event.input;
-    const value = event.value;
+    if (!this.matAutocomplete.isOpen) {
+      const input = event.input;
+      const value = event.value;
 
-    if ((value || '').trim()) {
-      this.skills.push({name: value.trim()});
-    }
+      if ((value || '').trim()) {
+        this.skills.push(value.trim());
+      }
 
-    // Reset the input value
-    if (input) {
-      input.value = '';
+      // Reset the input value
+      if (input) {
+        input.value = '';
+      }
+
+      this.skillCtrl.setValue(null);
     }
   }
 
-  remove(skill: Skill): void {
+  remove(skill: string): void {
     const index = this.skills.indexOf(skill);
 
     if (index >= 0) {
@@ -49,12 +56,15 @@ export class SkillsComponent {
     }
   }
 
-  onPanelOpened() {
-    this.isAllPanelsOpened = true;
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.skills.push(event.option.viewValue);
+    this.skillInput.nativeElement.value = '';
+    this.skillCtrl.setValue(null);
   }
 
-  onPanelClosed() {
-    this.isAllPanelsOpened = false;
-  }
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
 
+    return this.allSkills.filter(skill => skill.toLowerCase().indexOf(filterValue) === 0);
+  }
 }

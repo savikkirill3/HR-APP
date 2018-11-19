@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material-module/material.module';
 import { CustomFormsModule } from 'ng2-validation';
 
@@ -29,6 +29,7 @@ import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edi
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     CustomFormsModule
   ],
   providers: [],

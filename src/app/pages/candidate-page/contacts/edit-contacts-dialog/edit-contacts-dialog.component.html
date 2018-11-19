@@ -1,5 +1,5 @@
 <div class="dialog">
-  <h2 mat-dialog-title>Edit Candidate</h2>
+  <h2 mat-dialog-title>Edit Contacts</h2>
 
   <div mat-dialog-content>
     <form fxLayout="column" #form="ngForm">
@@ -7,13 +7,19 @@
         <input
           matInput
           [(ngModel)]="data.Email"
-          placeholder="Email"
           name="email"
+          placeholder="Email"
+          [formControl]="contactsFormControl"
           required
         />
-        <mat-error align="end">This field is required.</mat-error>
-      </mat-form-field>
 
+        <mat-error *ngIf="contactsFormControl.hasError('email') && !contactsFormControl.hasError('required')" align="end">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="contactsFormControl.hasError('required')" align="end">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
       <mat-form-field>
         <input
           matInput
@@ -22,6 +28,7 @@
           name="phone"
           required
         />
+        <mat-error align="end">Phone is <strong>required</strong></mat-error>
       </mat-form-field>
 
       <mat-form-field>
@@ -32,6 +39,7 @@
           name="skype"
           required
         />
+        <mat-error align="end">Skype is <strong>required</strong></mat-error>
       </mat-form-field>
 
     </form>
@@ -57,7 +65,7 @@
       [mat-dialog-close]="data"
       cdkFocusInitial
       fxFlex="50"
-      [disabled]="form.invalid"
+      [disabled] = "contactsFormControl.hasError('required') || contactsFormControl.hasError('email') || form.invalid"
     >
       Save
     </button>

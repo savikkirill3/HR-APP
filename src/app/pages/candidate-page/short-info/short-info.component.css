@@ -1,4 +1,4 @@
-.candidate-info {
+.contacts-info {
   position: relative;
 }
 
@@ -20,19 +20,19 @@
   width: 50%;
 }
 
-.candidate-info-table {
+.contacts-info-table {
   margin-left: 15px;
 }
 
-.candidate-info-table td {
+.contacts-info-table td {
   padding: 13px 5px;
 }
 
-.candidate-info-table td:first-child {
+.contacts-info-table td:first-child {
   width:1%;
 }
 
-.candidate-info-table td:last-child {
+.contacts-info-table td:last-child {
   font-weight: bold;
 }
 

@@ -16,10 +16,12 @@ export interface CandiateShortInfo {
   styleUrls: ['./short-info.component.css']
 })
 export class ShortInfoComponent {
+  imgSrc = 'https://assets.capitalfm.com/2018/23/lilliya-scarlett-instagram-1528814125-custom-0.png';
+
   // FIXME: hard typed user - CHANGE it
   candidate: CandiateShortInfo = {
-    name: 'Brad',
-    surname: 'Pitt',
+    name: 'Lilliya ',
+    surname: 'Scarlett ',
     birthday: '',
     salaryInDollars: 500
   };
@@ -38,11 +40,19 @@ export class ShortInfoComponent {
     });
   }
 
+  onFileUpload(e: Event) {
+    const inputElement = e.target as HTMLInputElement;
+    const file = inputElement.files[0];
+    this.handleFileUpload(file);
+    console.log(e);
+  }
+
+  private handleFileUpload(file: File) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.imgSrc = reader.result as string;
+    };
+  }
+
 }
-
-
-//   id
-// name
-// surname
-// birthday
-// salaryInDollars

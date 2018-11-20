@@ -1,8 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
+import {MatDialog} from '@angular/material';
+import {EditComponent} from './edit/edit.component';
 
 export interface Experience {
-  dataFrom: string;
-  dataTo: string;
+  dateFrom: string;
+  dateTo: string;
   companyName: string;
   position: string;
   achievements: string;
@@ -13,20 +15,29 @@ export interface Experience {
   templateUrl: './experiences.component.html',
   styleUrls: ['./experiences.component.css']
 })
-export class ExperiencesComponent implements OnInit {
+export class ExperiencesComponent {
 
   experience: Experience = {
-    dataFrom: '01.01.2018',
-    dataTo: '01.04.2018',
+    dateFrom: '01.01.2018',
+    dateTo: '01.04.2018',
     companyName: 'Mifort',
     position: 'Javist',
     achievements: ''
   };
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
   }
 
-  ngOnInit() {
+  onOpenEditDialog() {
+    const dialogRed = this.dialog.open(EditComponent, {
+      data: {...this.experience}
+    });
+
+    dialogRed.afterClosed().subscribe(result => {
+      if (result) {
+        this.experience = result;
+      }
+    });
   }
 
 }

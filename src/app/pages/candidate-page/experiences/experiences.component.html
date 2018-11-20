@@ -2,7 +2,7 @@
 
   <table fxFlex="1 1 auto" class="candidate-info-table">
     <tr>
-      <td>{{ experience.dataFrom }} &mdash; {{ experience.dataTo }}</td>
+      <td>{{ experience.dateFrom | date }} &mdash; {{ experience.dateTo | date }}</td>
     </tr>
     <tr>
       <td>Company name:</td>
@@ -22,6 +22,7 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item ><span>Add new</span></button>
     <button mat-menu-item (click)="onOpenEditDialog()"><span>Edit</span></button>
   </mat-menu>
 </mat-card>

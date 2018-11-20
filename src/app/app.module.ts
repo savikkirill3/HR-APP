@@ -13,6 +13,7 @@ import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info
 import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
 import { ExperiencesComponent } from './pages/candidate-page/experiences/experiences.component';
+import { EditComponent } from './pages/candidate-page/experiences/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ExperiencesComponent } from './pages/candidate-page/experiences/experie
     ShortInfoComponent,
     EditCandidateDialogComponent,
     SkillsComponent,
-    ExperiencesComponent
+    ExperiencesComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { ExperiencesComponent } from './pages/candidate-page/experiences/experie
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent]
+  entryComponents: [EditCandidateDialogComponent,
+  EditComponent]
 })
 export class AppModule {}

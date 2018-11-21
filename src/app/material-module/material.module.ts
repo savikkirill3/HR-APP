@@ -12,7 +12,9 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatChipsModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatRippleModule,
+  MatTooltipModule
 } from '@angular/material';
 
 @NgModule({
@@ -29,7 +31,9 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatRippleModule,
+    MatTooltipModule
   ],
   exports: [
     MatButtonModule,
@@ -44,7 +48,9 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatRippleModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule {}

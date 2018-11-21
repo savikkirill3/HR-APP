@@ -6,7 +6,7 @@ import { EditCandidateDialogComponent } from './edit-candidate-dialog/edit-candi
 export interface CandiateShortInfo {
   name: string;
   surname: string;
-  birthday: string;
+  birthday: Date;
   salaryInDollars: number;
 }
 
@@ -22,7 +22,7 @@ export class ShortInfoComponent {
   candidate: CandiateShortInfo = {
     name: 'Lilliya ',
     surname: 'Scarlett ',
-    birthday: '',
+    birthday: new Date('11/15/1995'),
     salaryInDollars: 500
   };
 

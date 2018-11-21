@@ -3,8 +3,8 @@ import {MatDialog} from '@angular/material';
 import {EditComponent} from './edit/edit.component';
 
 export interface Experience {
-  dateFrom: string;
-  dateTo: string;
+  dateFrom: Date;
+  dateTo: Date;
   companyName: string;
   position: string;
   achievements: string;
@@ -18,8 +18,8 @@ export interface Experience {
 export class ExperiencesComponent {
 
   experience: Experience = {
-    dateFrom: '01.01.2018',
-    dateTo: '01.04.2018',
+    dateFrom: new Date('11/11/2015'),
+    dateTo: new Date('11/15/2015'),
     companyName: 'Mifort',
     position: 'Javist',
     achievements: ''

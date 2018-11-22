@@ -1,16 +1,12 @@
-<div class="contacts-info" fxLayout>
-  <table fxFlex="1 1 auto" class="contacts-info-table">
+<div class="notes-info" fxLayout>
+  <table fxFlex="1 1 auto" class="notes-info-table">
     <tr>
-      <td>Email:</td>
-      <td>{{contacts.Email}}</td>
+      <td>Note:</td>
+      <td>{{note.Note}}</td>
     </tr>
     <tr>
-      <td>Phone:</td>
-      <td>{{contacts.Phone}}</td>
-    </tr>
-    <tr>
-      <td>Skype:</td>
-      <td>{{contacts.Skype}}</td>
+      <td>Date:</td>
+      <td>{{note.date | date}}</td>
     </tr>
   </table>
 
@@ -21,3 +17,4 @@
     <button mat-menu-item (click)="onOpenEditDialog()"><span>Edit</span></button>
   </mat-menu>
 </div>
+

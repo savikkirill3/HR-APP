@@ -1,5 +1,4 @@
-<mat-card class="candidate-info" fxLayout>
-
+<div class="experience-info">
   <table fxFlex="1 1 auto" class="candidate-info-table">
     <tr>
       <td>{{ experience.dateFrom | date }} &mdash; {{ experience.dateTo | date }}</td>
@@ -25,4 +24,4 @@
     <button mat-menu-item ><span>Add new</span></button>
     <button mat-menu-item (click)="onOpenEditDialog()"><span>Edit</span></button>
   </mat-menu>
-</mat-card>
+</div>

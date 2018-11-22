@@ -18,7 +18,6 @@ import { EditContactsDialogComponent } from './pages/candidate/candidate-page/co
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
 import { CandidateComponent } from './pages/candidate/candidate.component';
-import { InterviewfeedbackComponent } from './pages/interviewfeedback/interviewfeedback.component';
 import { VacancyComponent } from './pages/vacancy/vacancy.component';
 import { InterviewComponent } from './pages/interview/interview.component';
 
@@ -32,7 +31,7 @@ import { InterviewComponent } from './pages/interview/interview.component';
     ContactsComponent,
     EditContactsDialogComponent,
     CvsComponent,
-    CvsAddComponent, CandidateComponent, InterviewfeedbackComponent, VacancyComponent, InterviewComponent
+    CvsAddComponent, CandidateComponent, VacancyComponent, InterviewComponent
   ],
   imports: [
     AppRoutingModule,

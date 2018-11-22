@@ -5,7 +5,7 @@
     *ngFor="let link of links"
     routerLinkActive="active"
   >
-    <a [routerLink]="[link.url]">
+    <a [routerLink]="link.url">
       {{link.name}}
     </a>
   </li>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,7 @@ export class AppComponent {
 
   links = [
     {url: 'interview', name: 'Interview'},
-    {url: 'candidate', name: 'Candidates'},
-    {url: 'vacancy', name: 'Vacancy'},
-    {url: 'interviewfeedback', name: 'Interview feedback'},
+    {url: 'candidates', name: 'Candidates'},
+    {url: 'vacancy', name: 'Vacancy'}
   ];
 }

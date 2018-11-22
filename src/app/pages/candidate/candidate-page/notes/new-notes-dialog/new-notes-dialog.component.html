@@ -1,5 +1,5 @@
 <div class="dialog">
-  <h2 mat-dialog-title>Edit Notes</h2>
+  <h2 mat-dialog-title>New Note</h2>
 
   <div mat-dialog-content>
     <form fxLayout="column" #form="ngForm">
@@ -22,6 +22,7 @@
           [matDatepicker]="picker"
           name="date-of-comment"
           placeholder="Date of comment"
+          required
         />
         <mat-datepicker-toggle
           matSuffix

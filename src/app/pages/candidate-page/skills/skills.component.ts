@@ -5,7 +5,6 @@ import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocomplete} from '
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
-
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',

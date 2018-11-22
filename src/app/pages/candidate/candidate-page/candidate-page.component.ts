@@ -11,7 +11,7 @@ export class CandidatePageComponent implements OnInit {
 
   @ViewChild('myaccordion') myPanels: MatAccordion;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

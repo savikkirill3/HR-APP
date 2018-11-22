@@ -17,7 +17,7 @@ export class NotesComponent {
   note: CandidateNotes = {
     Note: 'He was very smart at interview',
     date: new Date('09/09/2018')
-};
+  };
 
   constructor(public dialog: MatDialog) { }
 

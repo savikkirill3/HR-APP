@@ -28,7 +28,6 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
 import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +56,10 @@ import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent, EditNotesDialogComponent, NewNotesDialogComponent]
+  entryComponents: [EditCandidateDialogComponent,
+    EditContactsDialogComponent,
+    EditComponent,
+    EditNotesDialogComponent,
+    NewNotesDialogComponent]
 })
 export class AppModule {}

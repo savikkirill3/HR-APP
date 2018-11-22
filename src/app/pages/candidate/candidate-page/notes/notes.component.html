@@ -15,7 +15,11 @@
   </button>
   <mat-menu #menu="matMenu" xPosition="before">
     <button mat-menu-item (click)="onOpenEditDialog(i)"><span>Edit</span></button>
-    <button mat-menu-item (click)="onOpenNewDialog(i)"><span>Add New</span></button>
+    <!--<button mat-menu-item (click)="onOpenNewDialog()"><span>Add New</span></button>-->
+    <button mat-menu-item (click)="onDelete(i)"><span>Delete</span></button>
+
   </mat-menu>
 </mat-card>
+<button (click)="onOpenNewDialog()" mat-raised-button >Add Note</button>
+
 

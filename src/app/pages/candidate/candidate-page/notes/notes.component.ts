@@ -51,4 +51,8 @@ export class NotesComponent {
     });
   }
 
+  onDelete(index) {
+    this.notes.splice(index, 1);
+  }
+
 }

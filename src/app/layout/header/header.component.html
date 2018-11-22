@@ -1,0 +1,13 @@
+<nav class="nav">
+  <span class="nav-logo">HR APP</span>
+
+  <a
+    *ngFor="let link of links"
+    [routerLink]="link.url"
+    routerLinkActive="active"
+    mat-button
+    class="nav-item"
+  >
+    {{ link.name }}
+  </a>
+</nav>

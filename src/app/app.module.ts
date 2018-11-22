@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from './material-module/material.module';
+import { MaterialModule } from './modules/material/material.module';
 import { CustomFormsModule } from 'ng2-validation';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,7 @@ import { VacancyComponent } from './pages/vacancy/vacancy.component';
 import { InterviewComponent } from './pages/interview/interview.component';
 import { CandidatePageComponent } from './pages/candidate/candidate-page/candidate-page.component';
 import { ShortInfoComponent } from './pages/candidate/candidate-page/short-info/short-info.component';
-import {EditCandidateDialogComponent} from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
+import { EditCandidateDialogComponent } from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate/candidate-page/skills/skills.component';
 import { ExperiencesComponent } from './pages/candidate/candidate-page/experiences/experiences.component';
 import { EditComponent } from './pages/candidate/candidate-page/experiences/edit/edit.component';
@@ -25,8 +25,7 @@ import { ContactsComponent } from './pages/candidate/candidate-page/contacts/con
 import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
-
-
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,11 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
     CvsComponent,
     CvsAddComponent,
     NotesComponent,
-    EditNotesDialogComponent, CandidateComponent, VacancyComponent, InterviewComponent
+    EditNotesDialogComponent,
+    CandidateComponent,
+    VacancyComponent,
+    InterviewComponent,
+    HeaderComponent
   ],
   imports: [
     AppRoutingModule,
@@ -56,6 +59,11 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent, EditNotesDialogComponent]
+  entryComponents: [
+    EditCandidateDialogComponent,
+    EditContactsDialogComponent,
+    EditComponent,
+    EditNotesDialogComponent
+  ]
 })
 export class AppModule {}

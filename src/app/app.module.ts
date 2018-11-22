@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from './material-module/material.module';
+import { MaterialModule } from './modules/material/material.module';
 import { CustomFormsModule } from 'ng2-validation';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,7 @@ import { VacancyComponent } from './pages/vacancy/vacancy.component';
 import { InterviewComponent } from './pages/interview/interview.component';
 import { CandidatePageComponent } from './pages/candidate/candidate-page/candidate-page.component';
 import { ShortInfoComponent } from './pages/candidate/candidate-page/short-info/short-info.component';
-import {EditCandidateDialogComponent} from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
+import { EditCandidateDialogComponent } from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate/candidate-page/skills/skills.component';
 import { ExperiencesComponent } from './pages/candidate/candidate-page/experiences/experiences.component';
 import { EditComponent } from './pages/candidate/candidate-page/experiences/edit/edit.component';
@@ -26,7 +26,7 @@ import { EditContactsDialogComponent } from './pages/candidate/candidate-page/co
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
 import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
-
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,12 @@ import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/
     CvsComponent,
     CvsAddComponent,
     NotesComponent,
-    EditNotesDialogComponent, CandidateComponent, VacancyComponent, InterviewComponent, NewNotesDialogComponent
+    EditNotesDialogComponent,
+    CandidateComponent,
+    VacancyComponent,
+    InterviewComponent,
+    NewNotesDialogComponent,
+    HeaderComponent
   ],
   imports: [
     AppRoutingModule,

@@ -19,11 +19,11 @@ html {
 
 body {
   background-image: url('./assets/images/background-pattern.png'),
-    linear-gradient(135deg, rgba(244, 67, 54, 0.37), rgba(255, 64, 128, 0.37));
+    linear-gradient(135deg, rgba(244, 67, 54, 0.55), rgba(255, 64, 128, 0.45));
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 35px 0;
+  padding: 0 0 35px;
 
   background-size: 50px, auto;
   background-attachment: fixed;

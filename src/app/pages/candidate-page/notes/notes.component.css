@@ -1,0 +1,41 @@
+.notes-info {
+  position: relative;
+}
+
+.overflow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+}
+
+
+.editingInput {
+  top: 3px;
+  width: 50%;
+}
+
+.notes-info-table {
+  margin-left: 15px;
+}
+
+.notes-info-table td {
+  padding: 13px 5px;
+}
+
+.notes-info-table td:first-child {
+  width:1%;
+}
+
+.notes-info-table td:last-child {
+  font-weight: bold;
+}
+
+/*
+matTooltip="Click to update the image"
+[matTooltipShowDelay]="1000" */

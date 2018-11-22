@@ -15,9 +15,9 @@ export interface CandidateNotes {
 export class NotesComponent {
 
   note: CandidateNotes = {
-    Note: '',
-    date: new Date('04/14/2018')
-}
+    Note: 'He was very smart at interview',
+    date: new Date('09/09/2018')
+};
 
   constructor(public dialog: MatDialog) { }
 

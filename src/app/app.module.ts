@@ -49,6 +49,6 @@ import { EditNotesDialogComponent } from './pages/candidate-page/notes/edit-note
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent, EditNotesDialogComponent]
 })
 export class AppModule {}

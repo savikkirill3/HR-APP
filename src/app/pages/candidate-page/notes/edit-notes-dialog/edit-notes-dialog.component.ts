@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material';
+import { CandidateNotes } from '../notes.component';
 
 @Component({
   selector: 'app-edit-notes-dialog',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditNotesDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: CandidateNotes) { }
 
   ngOnInit() {
   }

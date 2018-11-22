@@ -47,19 +47,19 @@
   width: 50%;
 }
 
-.contacts-info-table {
+.notes-info-table {
   margin-left: 15px;
 }
 
-.contacts-info-table td {
+.notes-info-table td {
   padding: 13px 5px;
 }
 
-.contacts-info-table td:first-child {
+.notes-info-table td:first-child {
   width:1%;
 }
 
-.contacts-info-table td:last-child {
+.notes-info-table td:last-child {
   font-weight: bold;
 }
 

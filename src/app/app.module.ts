@@ -9,6 +9,9 @@ import { CustomFormsModule } from 'ng2-validation';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NotesComponent } from './pages/candidate/candidate-page/notes/notes.component';
+import { EditNotesDialogComponent } from './pages/candidate/candidate-page/notes/edit-notes-dialog/edit-notes-dialog.component';
+
 import { CandidateComponent } from './pages/candidate/candidate.component';
 import { VacancyComponent } from './pages/vacancy/vacancy.component';
 import { InterviewComponent } from './pages/interview/interview.component';
@@ -24,6 +27,7 @@ import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +40,9 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
     ContactsComponent,
     EditContactsDialogComponent,
     CvsComponent,
-    CvsAddComponent, CandidateComponent, VacancyComponent, InterviewComponent
+    CvsAddComponent,
+    NotesComponent,
+    EditNotesDialogComponent, CandidateComponent, VacancyComponent, InterviewComponent
   ],
   imports: [
     AppRoutingModule,
@@ -50,6 +56,6 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent, EditNotesDialogComponent]
 })
 export class AppModule {}

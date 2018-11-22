@@ -1,19 +1,5 @@
-.contacts-info {
+.notes-info {
   position: relative;
-}
-
-.candidate-info-figure {
-  border-radius: 4px;
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-  margin: 0;
-  max-width: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-.candidate-info-figure:hover .overflow {
-  opacity: 1;
-  transition: opacity .2s ease-out 1.5s;
 }
 
 .overflow {
@@ -28,19 +14,6 @@
   color: white;
 }
 
-.candidate-info-img {
-  display: block;
-  max-height: 30vh;
-  min-width: 100%;
-}
-
-.img-uploader {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 
 .editingInput {
   top: 3px;

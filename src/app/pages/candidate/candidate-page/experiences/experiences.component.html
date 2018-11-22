@@ -1,0 +1,28 @@
+<mat-card class="candidate-info" fxLayout>
+
+  <table fxFlex="1 1 auto" class="candidate-info-table">
+    <tr>
+      <td>{{ experience.dateFrom | date }} &mdash; {{ experience.dateTo | date }}</td>
+    </tr>
+    <tr>
+      <td>Company name:</td>
+      <td>{{ experience.companyName }}</td>
+    </tr>
+    <tr>
+      <td>Position:</td>
+      <td>{{ experience.position }}</td>
+    </tr>
+    <tr>
+      <td>Responsibilities / Achievements:</td>
+      <td>{{ experience.achievements }}</td>
+    </tr>
+  </table>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item ><span>Add new</span></button>
+    <button mat-menu-item (click)="onOpenEditDialog()"><span>Edit</span></button>
+  </mat-menu>
+</mat-card>

@@ -11,6 +11,5 @@ export class AppComponent {
     {url: 'interview', name: 'Interview'},
     {url: 'candidate', name: 'Candidates'},
     {url: 'vacancy', name: 'Vacancy'},
-    {url: 'interviewfeedback', name: 'Interview feedback'},
-  ];
+   ];
 }

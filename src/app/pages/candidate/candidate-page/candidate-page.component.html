@@ -43,6 +43,16 @@
 
   <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
     <mat-expansion-panel-header>
+        <mat-panel-title> Experiences</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ng-template matExpansionPanelContent>
+      <app-experiences></app-experiences>
+    </ng-template>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+    <mat-expansion-panel-header>
       <mat-panel-title> Notes</mat-panel-title>
     </mat-expansion-panel-header>
 

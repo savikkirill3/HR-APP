@@ -9,18 +9,21 @@ import { CustomFormsModule } from 'ng2-validation';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CandidateComponent } from './pages/candidate/candidate.component';
+import { VacancyComponent } from './pages/vacancy/vacancy.component';
+import { InterviewComponent } from './pages/interview/interview.component';
 import { CandidatePageComponent } from './pages/candidate/candidate-page/candidate-page.component';
 import { ShortInfoComponent } from './pages/candidate/candidate-page/short-info/short-info.component';
-import { EditCandidateDialogComponent } from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
+import {EditCandidateDialogComponent} from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate/candidate-page/skills/skills.component';
+import { ExperiencesComponent } from './pages/candidate/candidate-page/experiences/experiences.component';
+import { EditComponent } from './pages/candidate/candidate-page/experiences/edit/edit.component';
 import { ContactsComponent } from './pages/candidate/candidate-page/contacts/contacts.component';
 import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
-import { CandidateComponent } from './pages/candidate/candidate.component';
-import { InterviewfeedbackComponent } from './pages/interviewfeedback/interviewfeedback.component';
-import { VacancyComponent } from './pages/vacancy/vacancy.component';
-import { InterviewComponent } from './pages/interview/interview.component';
+
+
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import { InterviewComponent } from './pages/interview/interview.component';
     ShortInfoComponent,
     EditCandidateDialogComponent,
     SkillsComponent,
+    ExperiencesComponent,
+    EditComponent,
     ContactsComponent,
     EditContactsDialogComponent,
     CvsComponent,
-    CvsAddComponent, CandidateComponent, InterviewfeedbackComponent, VacancyComponent, InterviewComponent
+    CvsAddComponent, CandidateComponent, VacancyComponent, InterviewComponent
+
   ],
   imports: [
     AppRoutingModule,
@@ -46,6 +52,6 @@ import { InterviewComponent } from './pages/interview/interview.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent]
 })
 export class AppModule {}

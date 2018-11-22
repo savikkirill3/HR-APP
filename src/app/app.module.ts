@@ -28,10 +28,10 @@ import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.comp
     EditCandidateDialogComponent,
     SkillsComponent,
     ExperiencesComponent,
-    EditComponent
+    EditComponent,
     ContactsComponent,
     EditContactsDialogComponent,
-    CvsComponent, 
+    CvsComponent,
     CvsAddComponent
   ],
   imports: [

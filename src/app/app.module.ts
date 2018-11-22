@@ -25,6 +25,7 @@ import { ContactsComponent } from './pages/candidate/candidate-page/contacts/con
 import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
+import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
 
 
 
@@ -42,7 +43,7 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
     CvsComponent,
     CvsAddComponent,
     NotesComponent,
-    EditNotesDialogComponent, CandidateComponent, VacancyComponent, InterviewComponent
+    EditNotesDialogComponent, CandidateComponent, VacancyComponent, InterviewComponent, NewNotesDialogComponent
   ],
   imports: [
     AppRoutingModule,
@@ -56,6 +57,6 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent, EditNotesDialogComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent, EditNotesDialogComponent, NewNotesDialogComponent]
 })
 export class AppModule {}

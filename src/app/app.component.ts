@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  links = [
+    {url: 'interview', name: 'Interview'},
+    {url: 'candidate', name: 'Candidates'},
+    {url: 'vacancy', name: 'Vacancy'},
+    {url: 'interviewfeedback', name: 'Interview feedback'},
+  ];
 }

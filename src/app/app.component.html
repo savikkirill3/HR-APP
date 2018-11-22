@@ -1,3 +1,16 @@
-<div class="container">
-  <app-candidate-page></app-candidate-page>
-</div>
+<ul>
+  <h4>HR APP</h4>
+
+  <li
+    *ngFor="let link of links"
+    routerLinkActive="active"
+  >
+    <a [routerLink]="[link.url]">
+      {{link.name}}
+    </a>
+  </li>
+</ul>
+
+<main class="content">
+  <router-outlet></router-outlet>
+</main>

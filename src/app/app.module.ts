@@ -6,16 +6,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material-module/material.module';
 import { CustomFormsModule } from 'ng2-validation';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CandidatePageComponent } from './pages/candidate-page/candidate-page.component';
-import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info.component';
-import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
-import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
-import { ContactsComponent } from './pages/candidate-page/contacts/contacts.component';
-import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
-import { CvsComponent } from './pages/candidate-page/cvs/cvs.component';
-import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.component';
+import { CandidatePageComponent } from './pages/candidate/candidate-page/candidate-page.component';
+import { ShortInfoComponent } from './pages/candidate/candidate-page/short-info/short-info.component';
+import { EditCandidateDialogComponent } from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
+import { SkillsComponent } from './pages/candidate/candidate-page/skills/skills.component';
+import { ContactsComponent } from './pages/candidate/candidate-page/contacts/contacts.component';
+import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
+import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
+import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
+import { CandidateComponent } from './pages/candidate/candidate.component';
+import { InterviewfeedbackComponent } from './pages/interviewfeedback/interviewfeedback.component';
+import { VacancyComponent } from './pages/vacancy/vacancy.component';
+import { InterviewComponent } from './pages/interview/interview.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +31,11 @@ import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.comp
     SkillsComponent,
     ContactsComponent,
     EditContactsDialogComponent,
-    CvsComponent, 
-    CvsAddComponent
+    CvsComponent,
+    CvsAddComponent, CandidateComponent, InterviewfeedbackComponent, VacancyComponent, InterviewComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,

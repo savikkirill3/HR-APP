@@ -12,10 +12,13 @@ import { CandidatePageComponent } from './pages/candidate-page/candidate-page.co
 import { ShortInfoComponent } from './pages/candidate-page/short-info/short-info.component';
 import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
+import { ExperiencesComponent } from './pages/candidate-page/experiences/experiences.component';
+import { EditComponent } from './pages/candidate-page/experiences/edit/edit.component';
 import { ContactsComponent } from './pages/candidate-page/contacts/contacts.component';
 import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 import { CvsComponent } from './pages/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.comp
     ShortInfoComponent,
     EditCandidateDialogComponent,
     SkillsComponent,
+    ExperiencesComponent,
+    EditComponent
     ContactsComponent,
     EditContactsDialogComponent,
     CvsComponent, 
@@ -40,6 +45,6 @@ import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.comp
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent]
 })
 export class AppModule {}

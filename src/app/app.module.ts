@@ -24,7 +24,6 @@ import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +37,6 @@ import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cv
     EditContactsDialogComponent,
     CvsComponent,
     CvsAddComponent, CandidateComponent, VacancyComponent, InterviewComponent
-
   ],
   imports: [
     AppRoutingModule,

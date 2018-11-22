@@ -1,4 +1,4 @@
-<h1>Candidate</h1>
+<h1 class="candidate-title">Candidate</h1>
 
 <app-short-info></app-short-info>
 
@@ -17,19 +17,19 @@
       <mat-panel-title> Contacts</mat-panel-title>
     </mat-expansion-panel-header>
     <ng-template matExpansionPanelContent>
-      Some deferred content
+      <app-contacts></app-contacts>
     </ng-template>
   </mat-expansion-panel>
 
-  <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
-    <mat-expansion-panel-header>
-      <mat-panel-title> CVS</mat-panel-title>
-    </mat-expansion-panel-header>
+    <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+      <mat-expansion-panel-header>
+        <mat-panel-title> CVS </mat-panel-title>
+      </mat-expansion-panel-header>
 
-    <ng-template matExpansionPanelContent>
-      Some deferred content
-    </ng-template>
-  </mat-expansion-panel>
+      <ng-template matExpansionPanelContent>
+        <app-cvs></app-cvs>
+      </ng-template>
+    </mat-expansion-panel>
 
   <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
     <mat-expansion-panel-header>
@@ -39,7 +39,6 @@
     <ng-template matExpansionPanelContent>
       <app-skills></app-skills>
     </ng-template>
-
   </mat-expansion-panel>
 
   <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">

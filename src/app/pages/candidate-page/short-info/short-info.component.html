@@ -1,12 +1,23 @@
-<mat-card class="candidate-info" fxLayout>
-  <figure class="candidate-info-figure" fxLayout fxLayoutAlign="center center">
-    <img
-      class="candidate-info-img"
-      src="https://i.pinimg.com/originals/79/13/fb/7913fb976c0023a7d5af13ab34085106.jpg"
+<mat-card class="contacts-info" fxLayout>
+  <figure
+    class="candidate-info-figure"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    matRipple
+    [matRippleColor]="'rgba(255,255,255, .2)'"
+  >
+    <img class="candidate-info-img" [src]="imgSrc" />
+    <div class="overflow">Click to update the image</div>
+    <input
+      type="file"
+      id="img-uploader"
+      style="display:none;"
+      (change)="onFileUpload($event)"
     />
+    <label for="img-uploader" class="img-uploader"></label>
   </figure>
 
-  <table fxFlex="1 1 auto" class="candidate-info-table">
+  <table fxFlex="1 1 auto" class="contacts-info-table">
     <tr>
       <td>Name:</td>
       <td>{{ candidate.name }}</td>
@@ -25,10 +36,12 @@
     </tr>
   </table>
 
-  <button mat-icon-button  [matMenuTriggerFor]="menu">
-      <mat-icon >more_vert</mat-icon>
-    </button>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
   <mat-menu #menu="matMenu" xPosition="before">
-    <button mat-menu-item (click)="onOpenEditDialog()"><span>Edit</span></button>
+    <button mat-menu-item (click)="onOpenEditDialog()">
+      <span>Edit</span>
+    </button>
   </mat-menu>
 </mat-card>

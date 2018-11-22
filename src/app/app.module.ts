@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material-module/material.module';
 import { CustomFormsModule } from 'ng2-validation';
 
@@ -14,6 +14,11 @@ import { EditCandidateDialogComponent } from './pages/candidate-page/short-info/
 import { SkillsComponent } from './pages/candidate-page/skills/skills.component';
 import { ExperiencesComponent } from './pages/candidate-page/experiences/experiences.component';
 import { EditComponent } from './pages/candidate-page/experiences/edit/edit.component';
+import { ContactsComponent } from './pages/candidate-page/contacts/contacts.component';
+import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
+import { CvsComponent } from './pages/candidate-page/cvs/cvs.component';
+import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +29,10 @@ import { EditComponent } from './pages/candidate-page/experiences/edit/edit.comp
     SkillsComponent,
     ExperiencesComponent,
     EditComponent
+    ContactsComponent,
+    EditContactsDialogComponent,
+    CvsComponent, 
+    CvsAddComponent
   ],
   imports: [
     BrowserModule,
@@ -31,11 +40,11 @@ import { EditComponent } from './pages/candidate-page/experiences/edit/edit.comp
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     CustomFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent,
-  EditComponent]
+  entryComponents: [EditCandidateDialogComponent, EditContactsDialogComponent, EditComponent]
 })
 export class AppModule {}

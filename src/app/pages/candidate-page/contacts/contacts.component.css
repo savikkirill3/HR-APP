@@ -1,0 +1,26 @@
+.contacts-info {
+  position: relative;
+}
+
+.editingInput {
+  top: 3px;
+  width: 50%;
+}
+
+.contacts-info-table {
+  margin-left: 15px;
+}
+
+.contacts-info-table td {
+  padding: 13px 5px;
+}
+
+.contacts-info-table td:first-child {
+  width:1%;
+}
+
+.contacts-info-table td:last-child {
+  font-weight: bold;
+}
+
+

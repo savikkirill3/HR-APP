@@ -36,6 +36,10 @@
   font-weight: bold;
 }
 
+mat-card {
+  margin-bottom: 10px;
+}
+
 /*
 matTooltip="Click to update the image"
 [matTooltipShowDelay]="1000" */

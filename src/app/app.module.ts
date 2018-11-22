@@ -25,6 +25,7 @@ import { ContactsComponent } from './pages/candidate/candidate-page/contacts/con
 import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
+import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
 import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { HeaderComponent } from './layout/header/header.component';
     CandidateComponent,
     VacancyComponent,
     InterviewComponent,
+    NewNotesDialogComponent,
     HeaderComponent
   ],
   imports: [
@@ -59,11 +61,10 @@ import { HeaderComponent } from './layout/header/header.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [
-    EditCandidateDialogComponent,
+  entryComponents: [EditCandidateDialogComponent,
     EditContactsDialogComponent,
     EditComponent,
-    EditNotesDialogComponent
-  ]
+    EditNotesDialogComponent,
+    NewNotesDialogComponent]
 })
 export class AppModule {}

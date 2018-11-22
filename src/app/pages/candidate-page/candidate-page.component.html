@@ -51,5 +51,12 @@
       <app-experiences></app-experiences>
     </ng-template>
   </mat-expansion-panel>
-</mat-accordion>
 
+  <mat-expansion-panel (closed)="onPanelClosed()" (opened)="onPanelOpened()">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Notes</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ng-template matExpansionPanelContent> Some deferred content </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>

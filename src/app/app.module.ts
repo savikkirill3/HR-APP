@@ -19,6 +19,7 @@ import { EditContactsDialogComponent } from './pages/candidate-page/contacts/edi
 import { CvsComponent } from './pages/candidate-page/cvs/cvs.component';
 import { CvsAddComponent } from './pages/candidate-page/cvs/cvs-add/cvs-add.component';
 import { NotesComponent } from './pages/candidate-page/notes/notes.component';
+import { EditNotesDialogComponent } from './pages/candidate-page/notes/edit-notes-dialog/edit-notes-dialog.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { NotesComponent } from './pages/candidate-page/notes/notes.component';
     EditContactsDialogComponent,
     CvsComponent,
     CvsAddComponent,
-    NotesComponent
+    NotesComponent,
+    EditNotesDialogComponent
   ],
   imports: [
     BrowserModule,

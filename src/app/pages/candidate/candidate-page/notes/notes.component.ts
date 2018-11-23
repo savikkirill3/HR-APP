@@ -55,7 +55,7 @@ export class NotesComponent {
     this.notes.splice(index, 1);
   }
 
-  dataFilter(type: boolean) {
+  dateSort(type: boolean) {
     if (type === true) {
       this.notes.sort((n1, n2) => {
         return n1.date.getTime() - n2.date.getTime();

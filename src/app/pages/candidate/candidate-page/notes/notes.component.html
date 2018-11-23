@@ -1,9 +1,9 @@
 <mat-form-field>
-  <mat-select placeholder="Filter">
-    <mat-option value="dateAsc" (click) = dataFilter(true)>
+  <mat-select placeholder="Sort">
+    <mat-option value="dateAsc" (click) = "dateSort(true)">
       Date ASC
     </mat-option>
-    <mat-option value="dateDesc" (click) =dataFilter(false)>
+    <mat-option value="dateDesc" (click) ="dateSort(false)">
       Date DESC
     </mat-option>
   </mat-select>

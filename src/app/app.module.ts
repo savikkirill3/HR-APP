@@ -21,6 +21,7 @@ import { EditCandidateDialogComponent } from './pages/candidate/candidate-page/s
 import { SkillsComponent } from './pages/candidate/candidate-page/skills/skills.component';
 import { ExperiencesComponent } from './pages/candidate/candidate-page/experiences/experiences.component';
 import { EditComponent } from './pages/candidate/candidate-page/experiences/edit/edit.component';
+import { NewExperiencesDialogComponent } from './pages/candidate/candidate-page/experiences/new-experiences-dialog/new-experiences-dialog.component';
 import { ContactsComponent } from './pages/candidate/candidate-page/contacts/contacts.component';
 import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
 import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
@@ -37,6 +38,7 @@ import { HeaderComponent } from './layout/header/header.component';
     SkillsComponent,
     ExperiencesComponent,
     EditComponent,
+    NewExperiencesDialogComponent,
     ContactsComponent,
     EditContactsDialogComponent,
     CvsComponent,
@@ -64,6 +66,7 @@ import { HeaderComponent } from './layout/header/header.component';
   entryComponents: [EditCandidateDialogComponent,
     EditContactsDialogComponent,
     EditComponent,
+    NewExperiencesDialogComponent,
     EditNotesDialogComponent,
     NewNotesDialogComponent]
 })

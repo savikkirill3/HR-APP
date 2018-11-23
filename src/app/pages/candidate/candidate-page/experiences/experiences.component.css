@@ -1,26 +1,41 @@
-.candidate-info {
+.experiences-info {
   position: relative;
 }
+
+.overflow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+}
+
 
 .editingInput {
   top: 3px;
   width: 50%;
 }
 
-.candidate-info-table {
+.experiences-info-table {
   margin-left: 15px;
 }
 
-.candidate-info-table td {
+.experiences-info-table td {
   padding: 13px 5px;
 }
 
-.candidate-info-table td:first-child {
-  width: 1%;
+.experiences-info-table td:first-child {
+  width:1%;
 }
 
-.candidate-info-table td:last-child {
+.experiences-info-table td:last-child {
   font-weight: bold;
 }
 
-
+mat-card {
+  margin-bottom: 10px;
+}

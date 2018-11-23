@@ -18,11 +18,11 @@ export class NotesComponent {
   notes: CandidateNotes[] = [
     {
       Note: 'He was very smart at interview',
-      date: new Date('04/21/2018')
+      date: new Date('4/21/2018')
     },
     {
       Note: 'He was very stupid at interview',
-      date: new Date('07/14/2018')
+      date: new Date('7/14/2018')
     }];
 
   constructor(public dialog: MatDialog) { }
@@ -53,6 +53,18 @@ export class NotesComponent {
 
   onDelete(index) {
     this.notes.splice(index, 1);
+  }
+
+  dataFilter(type: boolean) {
+    if (type === true) {
+      this.notes.sort((n1, n2) => {
+        return n1.date.getTime() - n2.date.getTime();
+      });
+    } else if (type === false) {
+      this.notes.sort((n1, n2) => {
+        return n2.date.getTime() - n1.date.getTime();
+      });
+    }
   }
 
 }

@@ -28,6 +28,7 @@ import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
 import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { MatSelectModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { HeaderComponent } from './layout/header/header.component';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule,
     CustomFormsModule
   ],
@@ -70,4 +72,7 @@ import { HeaderComponent } from './layout/header/header.component';
     EditNotesDialogComponent,
     NewNotesDialogComponent]
 })
-export class AppModule {}
+
+export class AppModule {
+
+}

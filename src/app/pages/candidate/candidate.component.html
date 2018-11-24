@@ -1,5 +1,6 @@
-<p>
-  candidate works!
-</p>
-<a [routerLink]="3" >Candidate</a>
-
+<a  *ngFor="let candidate of candidates"[routerLink]="candidate.id">
+  <div class="profile">
+    <h3> {{candidate.name}} </h3>
+    <img [src]="candidate.attachments[0]?.filePath" alt="profile photo" class="profile__image">
+  </div>
+</a>

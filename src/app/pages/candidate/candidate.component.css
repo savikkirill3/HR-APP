@@ -1,0 +1,14 @@
+.profile {
+  background: #fff;
+  border-radius: 7px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.profile__image {
+  height: 100%;
+}

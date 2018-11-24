@@ -1,14 +1,8 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EditCandidateDialogComponent } from './edit-candidate-dialog/edit-candidate-dialog.component';
+import { Candidate } from 'src/app/models/candidate.model';
 
-// FIXME: maybe put in separate folder with models
-export interface CandiateShortInfo {
-  name: string;
-  surname: string;
-  birthday: Date;
-  salaryInDollars: number;
-}
 
 @Component({
   selector: 'app-short-info',
@@ -16,26 +10,19 @@ export interface CandiateShortInfo {
   styleUrls: ['./short-info.component.css']
 })
 export class ShortInfoComponent {
-  imgSrc = 'https://assets.capitalfm.com/2018/23/lilliya-scarlett-instagram-1528814125-custom-0.png';
-
-  // FIXME: hard typed user - CHANGE it
-  candidate: CandiateShortInfo = {
-    name: 'Lilliya ',
-    surname: 'Scarlett ',
-    birthday: new Date('11/15/1995'),
-    salaryInDollars: 500
-  };
+  @Input() candidate: Candidate;
 
   constructor(public dialog: MatDialog) {}
 
   onOpenEditDialog() {
-    const dialogRed = this.dialog.open(EditCandidateDialogComponent, {
+    const dialogRef = this.dialog.open(EditCandidateDialogComponent, {
       data: {...this.candidate}
     });
 
-    dialogRed.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.candidate = result;
+        console.log(result);
       }
     });
   }
@@ -51,7 +38,7 @@ export class ShortInfoComponent {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      this.imgSrc = reader.result as string;
+      this.candidate.attachments[0].filePath = reader.result as string;
     };
   }
 

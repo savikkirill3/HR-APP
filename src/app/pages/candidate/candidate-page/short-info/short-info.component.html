@@ -6,7 +6,7 @@
     matRipple
     [matRippleColor]="'rgba(255,255,255, .2)'"
   >
-    <img class="candidate-info-img" [src]="imgSrc" />
+    <img class="candidate-info-img" [src]="candidate?.attachments[0].filePath" />
     <div class="overflow">Click to update the image</div>
     <input
       type="file"

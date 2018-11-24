@@ -28,6 +28,7 @@ import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component
 import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
 import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { CandidateService } from './services/candidate.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { HeaderComponent } from './layout/header/header.component';
     ReactiveFormsModule,
     CustomFormsModule
   ],
-  providers: [],
+  providers: [CandidateService],
   bootstrap: [AppComponent],
   entryComponents: [EditCandidateDialogComponent,
     EditContactsDialogComponent,

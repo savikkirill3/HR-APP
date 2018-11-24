@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CandidateService } from 'src/app/services/candidate.service';
+import { Candidate } from 'src/app/models/candidate.model';
 
 @Component({
   selector: 'app-candidate',
@@ -7,15 +9,14 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./candidate.component.css']
 })
 export class CandidateComponent implements OnInit {
+  candidates: Candidate[];
 
-  id: number;
-
-  constructor(private activateRoute: ActivatedRoute) {
-
-    this.id = activateRoute.snapshot.params['id'];
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private candidateService: CandidateService
+  ) {}
 
   ngOnInit() {
+    this.candidates = this.candidateService.getCandidates();
   }
-
 }

@@ -1,3 +1,14 @@
+<mat-form-field>
+  <mat-select placeholder="Sort">
+    <mat-option value="dateAsc" (click) = "dateSort(true)">
+      Date ASC
+    </mat-option>
+    <mat-option value="dateDesc" (click) ="dateSort(false)">
+      Date DESC
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
 <mat-card class="notes-info" fxLayout *ngFor="let note of notes; let i=index">
   <table fxFlex="1 1 auto" class="notes-info-table">
       <tr>
@@ -15,7 +26,6 @@
   </button>
   <mat-menu #menu="matMenu" xPosition="before">
     <button mat-menu-item (click)="onOpenEditDialog(i)"><span>Edit</span></button>
-    <!--<button mat-menu-item (click)="onOpenNewDialog()"><span>Add New</span></button>-->
     <button mat-menu-item (click)="onDelete(i)"><span>Delete</span></button>
 
   </mat-menu>

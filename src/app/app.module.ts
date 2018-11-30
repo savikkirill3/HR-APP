@@ -9,24 +9,10 @@ import { CustomFormsModule } from 'ng2-validation';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NotesComponent } from './pages/candidate/candidate-page/notes/notes.component';
-import { EditNotesDialogComponent } from './pages/candidate/candidate-page/notes/edit-notes-dialog/edit-notes-dialog.component';
-
 import { CandidateComponent } from './pages/candidate/candidate.component';
 import { VacancyComponent } from './pages/vacancy/vacancy.component';
 import { InterviewComponent } from './pages/interview/interview.component';
 import { CandidatePageComponent } from './pages/candidate/candidate-page/candidate-page.component';
-import { ShortInfoComponent } from './pages/candidate/candidate-page/short-info/short-info.component';
-import { EditCandidateDialogComponent } from './pages/candidate/candidate-page/short-info/edit-candidate-dialog/edit-candidate-dialog.component';
-import { SkillsComponent } from './pages/candidate/candidate-page/skills/skills.component';
-import { ExperiencesComponent } from './pages/candidate/candidate-page/experiences/experiences.component';
-import { EditComponent } from './pages/candidate/candidate-page/experiences/edit/edit.component';
-import { NewExperiencesDialogComponent } from './pages/candidate/candidate-page/experiences/new-experiences-dialog/new-experiences-dialog.component';
-import { ContactsComponent } from './pages/candidate/candidate-page/contacts/contacts.component';
-import { EditContactsDialogComponent } from './pages/candidate/candidate-page/contacts/edit-contacts-dialog/edit-contacts-dialog.component';
-import { CvsComponent } from './pages/candidate/candidate-page/cvs/cvs.component';
-import { CvsAddComponent } from './pages/candidate/candidate-page/cvs/cvs-add/cvs-add.component';
-import { NewNotesDialogComponent } from './pages/candidate/candidate-page/notes/new-notes-dialog/new-notes-dialog.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSelectModule } from '@angular/material';
 
@@ -34,22 +20,9 @@ import { MatSelectModule } from '@angular/material';
   declarations: [
     AppComponent,
     CandidatePageComponent,
-    ShortInfoComponent,
-    EditCandidateDialogComponent,
-    SkillsComponent,
-    ExperiencesComponent,
-    EditComponent,
-    NewExperiencesDialogComponent,
-    ContactsComponent,
-    EditContactsDialogComponent,
-    CvsComponent,
-    CvsAddComponent,
-    NotesComponent,
-    EditNotesDialogComponent,
     CandidateComponent,
     VacancyComponent,
     InterviewComponent,
-    NewNotesDialogComponent,
     HeaderComponent
   ],
   imports: [
@@ -65,12 +38,7 @@ import { MatSelectModule } from '@angular/material';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditCandidateDialogComponent,
-    EditContactsDialogComponent,
-    EditComponent,
-    NewExperiencesDialogComponent,
-    EditNotesDialogComponent,
-    NewNotesDialogComponent]
+  entryComponents: []
 })
 
 export class AppModule {

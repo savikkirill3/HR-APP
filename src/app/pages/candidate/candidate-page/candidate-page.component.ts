@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatAccordion } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-candidate-page',
@@ -7,31 +6,7 @@ import { MatAccordion } from '@angular/material';
   styleUrls: ['./candidate-page.component.css']
 })
 export class CandidatePageComponent implements OnInit {
-  isAllPanelsOpened = false;
 
-  @ViewChild('myaccordion') myPanels: MatAccordion;
-
-  constructor() {}
-
-  ngOnInit() {
-  }
-
-  openAll() {
-    this.myPanels.openAll();
-    this.isAllPanelsOpened = true;
-  }
-
-  closeAll() {
-    this.myPanels.closeAll();
-    this.isAllPanelsOpened = false;
-  }
-
-  onPanelOpened() {
-    this.isAllPanelsOpened = true;
-  }
-
-  onPanelClosed() {
-    this.isAllPanelsOpened = false;
-  }
+  ngOnInit() {}
 
 }
